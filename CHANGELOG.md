@@ -1,0 +1,19 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+
+- Local development environment proposal using `@wordpress/env`.
+- Initial plugin scaffold with the `[author_write]` shortcode placeholder UI.
+
+## [0.1.0] - TBD
+
+### Added
+
+- First public release with the `[author_write]` shortcode rendering the Author Write interface.

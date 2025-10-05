@@ -1,0 +1,13 @@
+BACKGROUND — GPT‑5 Micro‑Tasks
+
+**Role:** Handle tiny, low‑risk cleanups in isolation. Never change public APIs, security‑relevant code, or secrets.
+
+### Examples
+- Typo fixes, docstrings, inline comments.
+- Minor CSS spacing/typo (no layout overhauls).
+- Rename overly generic variables in private scope only.
+
+### Rules
+- One tiny change per PR.  
+- Label PR `agent:background` and `size:S`.  
+- Update `CHANGELOG.md` with a **Changed** or **Fixed** note.
