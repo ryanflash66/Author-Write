@@ -1,0 +1,94 @@
+{
+  "milestones": [
+    {
+      "name": "0.1.0",
+      "status": "in_progress",
+      "criteria": [
+        "shortcode_toggle",
+        "export_txt",
+        "save_draft",
+        "admin_usage",
+        "a11y_basics",
+        "readme_minimal"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "issue": 1,
+      "pr": null,
+      "title": "feat: transcript export (.txt)",
+      "labels": [
+        "agent:builder",
+        "type:feat",
+        "size:S",
+        "area:plugin"
+      ],
+      "status": "open",
+      "semver": "minor",
+      "owner": "builder",
+      "url": "https://github.com/ryanflash66/Author-Write/issues/1"
+    },
+    {
+      "issue": 2,
+      "pr": null,
+      "title": "feat: save to draft",
+      "labels": [
+        "agent:builder",
+        "type:feat",
+        "size:S",
+        "area:plugin"
+      ],
+      "status": "open",
+      "semver": "minor",
+      "owner": "builder",
+      "url": "https://github.com/ryanflash66/Author-Write/issues/2"
+    },
+    {
+      "issue": 3,
+      "pr": null,
+      "title": "feat: admin usage page",
+      "labels": [
+        "agent:builder",
+        "type:feat",
+        "size:S",
+        "area:plugin"
+      ],
+      "status": "open",
+      "semver": "minor",
+      "owner": "builder",
+      "url": "https://github.com/ryanflash66/Author-Write/issues/3"
+    },
+    {
+      "issue": 4,
+      "pr": null,
+      "title": "chore: accessibility pass",
+      "labels": [
+        "agent:builder",
+        "type:chore",
+        "size:S",
+        "area:plugin"
+      ],
+      "status": "open",
+      "semver": "patch",
+      "owner": "builder",
+      "url": "https://github.com/ryanflash66/Author-Write/issues/4"
+    },
+    {
+      "issue": 5,
+      "pr": null,
+      "title": "docs: minimal README",
+      "labels": [
+        "agent:docs",
+        "type:docs",
+        "size:S",
+        "area:plugin"
+      ],
+      "status": "open",
+      "semver": "patch",
+      "owner": "docs",
+      "url": "https://github.com/ryanflash66/Author-Write/issues/5"
+    }
+  ],
+  "last_sync": "2025-10-06T06:07:15Z"
+}
