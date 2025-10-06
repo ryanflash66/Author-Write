@@ -1,0 +1,41 @@
+name: Validate Ops State & Changelog
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Determine changed files
+        id: diff
+        run: |
+          git fetch --no-tags origin ${{ github.base_ref }} --depth=1
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed.txt
+          echo "CHANGED=$(tr '\n' ' ' < changed.txt)" >> $GITHUB_OUTPUT
+      - name: Ensure python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema
+      - name: Validate ops/state.json against schema
+        run: python scripts/validate_ops_state.py
+      - name: Enforce ops/state.json present for code changes
+        run: |
+          if grep -Eq '^(author_write/|templates/|includes/|assets/|admin/)' changed.txt; then
+            if ! grep -q '^ops/state.json$' changed.txt; then
+              echo "::error::Update ops/state.json with task/PR status."
+              exit 1
+            fi
+          fi
+      - name: Enforce CHANGELOG.md updated for feature/fix/chore
+        run: |
+          if grep -Eq '^(author_write/|templates/|includes/|assets/|admin/)' changed.txt; then
+            if ! grep -q '^CHANGELOG.md$' changed.txt; then
+              echo "::error::Update CHANGELOG.md [Unreleased] with SemVer bump."
+              exit 1
+            fi
+          fi

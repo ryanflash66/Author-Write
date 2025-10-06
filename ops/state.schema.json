@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["milestones", "tasks", "last_sync"],
+  "properties": {
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status", "criteria"],
+        "properties": {
+          "name": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["in_progress", "complete", "blocked"]
+          },
+          "criteria": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "issue",
+          "pr",
+          "title",
+          "labels",
+          "status",
+          "semver",
+          "owner"
+        ],
+        "properties": {
+          "issue": { "type": ["integer", "null"] },
+          "pr": { "type": ["integer", "null"] },
+          "title": { "type": "string" },
+          "labels": { "type": "array", "items": { "type": "string" } },
+          "status": {
+            "type": "string",
+            "enum": ["open", "in_progress", "review", "merged", "blocked"]
+          },
+          "semver": { "type": "string", "enum": ["patch", "minor", "major"] },
+          "owner": { "type": "string" }
+        }
+      }
+    },
+    "last_sync": { "type": "string", "format": "date-time" }
+  }
+}
