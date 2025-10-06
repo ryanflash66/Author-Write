@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial plugin scaffold with the `[author_write]` shortcode placeholder UI.
 - Checked-in `.wp-env.json` configuration for consistent local environments.
 - Enqueued front-end assets to hide inactive modes until reset when using `[author_write]`.
+- Stubbed `author_write/v1/chat` REST endpoint with nonce plumbing and friendly error messaging surfaced in the chat UI.
+- Surfaced user-facing error messaging in the chat UI when chat requests fail.
 
 ### Changed
 
