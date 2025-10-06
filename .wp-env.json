@@ -1,0 +1,13 @@
+{
+  "plugins": ["./"],
+  "mappings": {
+    "wp-content/uploads": "./.wp-env/uploads"
+  },
+  "env": {
+    "tests": {
+      "mappings": {
+        "wp-content/uploads": "./.wp-env/uploads-tests"
+      }
+    }
+  }
+}

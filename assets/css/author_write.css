@@ -1,0 +1,51 @@
+.author-write {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.author-write__modes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.author-write__mode-button,
+.author-write__reset {
+	background: #f5f5f5;
+	border: 1px solid #cdcdcd;
+	border-radius: 4px;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	padding: 0.5rem 0.75rem;
+	transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.author-write__mode-button:focus,
+.author-write__reset:focus {
+	outline: 2px solid #1d4ed8;
+	outline-offset: 2px;
+}
+
+.author-write__mode-button.is-active {
+	background: #1d4ed8;
+	border-color: #1d4ed8;
+	color: #fff;
+}
+
+.author-write__reset {
+	align-self: flex-start;
+	background: transparent;
+	border-color: #aaa;
+	color: inherit;
+}
+
+.author-write__reset:hover,
+.author-write__reset:focus-visible {
+	background: #f5f5f5;
+}
+
+.author-write--mode-active .author-write__placeholder {
+	border-left: 3px solid #1d4ed8;
+	padding-left: 0.75rem;
+}

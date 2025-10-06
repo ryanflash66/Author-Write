@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Author Write
- * Plugin URI:        https://example.com/author-write
+ * Plugin URI:        https://example.com/author_write
  * Description:       AI-assisted writing companion with specialized creative modes.
  * Version:           0.0.0
  * Requires at least: 6.5
@@ -9,8 +9,8 @@
  * Author:            Author Write
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       author-write
- * Domain Path:       /languages
+ * Text Domain:       author_write
+ * Domain Path:       author_write
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,3 +30,4 @@ function author_write_bootstrap() {
     $plugin->register_hooks();
 }
 add_action( 'plugins_loaded', 'author_write_bootstrap' );
+

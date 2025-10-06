@@ -9,3 +9,13 @@ This pack contains ready-to-paste prompts and repo templates to run a **multi‑
 - **Background**: GPT‑5 (tiny incremental cleanups).
 
 Use with your existing `rules.md`, `acceptance.md`, and `context.md`. Project slug: `author_write`. Shortcode: `[author_write]`.
+
+## Local Development
+
+1. `npm install -g @wordpress/env`
+2. `wp-env start`
+3. Visit `http://localhost:8888` (default credentials `admin`/`password`).
+4. Develop and test changes.
+5. `wp-env stop`
+
+See `docs/local-development.md` for full environment details.

@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `author-write.php` bootstraps the plugin, defines constants, and loads `includes/` classes.
+- `author_write.php` bootstraps the plugin, defines constants, and loads `includes/` classes.
 - Place core classes in `includes/Author_Write/*`, use `admin/` for the usage dashboard, and keep views in `templates/`.
 - Enqueue CSS/JS from `assets/` and keep `docs/` (e.g., `docs/local-development.md`) current.
 
@@ -17,7 +17,7 @@
 
 ## Coding Style & Naming Conventions
 - Follow WordPress PHP standards: 4-space indent, Yoda conditions, snake_case functions, PascalCase classes.
-- Namespace under `Author_Write`, prefix hooks `author_write_`, use the `author-write` text domain.
+- Namespace under `Author_Write`, prefix hooks `author_write_`, use the `author_write` text domain.
 - Sanitize inputs, escape outputs, and require nonces plus capability checks on mutating REST calls.
 
 ## Security, UX & Accessibility

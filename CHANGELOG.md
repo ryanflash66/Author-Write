@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Local development environment proposal using `@wordpress/env`.
 - Initial plugin scaffold with the `[author_write]` shortcode placeholder UI.
+- Checked-in `.wp-env.json` configuration for consistent local environments.
+- Enqueued front-end assets to hide inactive modes until reset when using `[author_write]`.
+
+### Changed
+
+- Normalized plugin slug and text domain to `author_write`.
+- Clarified README setup steps and referenced local development docs.
 
 ## [0.1.0] - TBD
 

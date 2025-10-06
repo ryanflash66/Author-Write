@@ -15,7 +15,7 @@ The simplest repeatable setup is to use [`@wordpress/env`](https://developer.wor
    ```bash
    npm install -g @wordpress/env
    ```
-2. Create an `.wp-env.json` file in the repository root with the following content:
+2. Review the existing `.wp-env.json` in the repository root (matches the following configuration):
    ```json
    {
      "plugins": ["./"],
@@ -51,8 +51,8 @@ The simplest repeatable setup is to use [`@wordpress/env`](https://developer.wor
 The plugin lives directly in this repository so it can be zipped and installed without extra nesting. The planned structure is:
 
 ```
-author-write/
-├── author-write.php          # Main plugin bootstrap file
+author_write/
+├── author_write.php          # Main plugin bootstrap file
 ├── uninstall.php             # Cleanup (to be added in later steps)
 ├── includes/
 │   ├── class-author-write.php   # Core loader class and shortcode registration
@@ -61,9 +61,9 @@ author-write/
 │   └── index.php             # Admin dashboard entry (future)
 ├── assets/
 │   ├── css/
-│   │   └── author-write.css  # Front-end styles (future)
+│   │   └── author_write.css  # Front-end styles (future)
 │   └── js/
-│       └── author-write.js   # Front-end logic (future)
+│       └── author_write.js   # Front-end logic (future)
 ├── templates/
 │   └── shortcode.php         # Render markup (future)
 ├── docs/

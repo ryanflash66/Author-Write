@@ -40,7 +40,7 @@ You are the **coding agent**. I (the human) will **not** hand-write code. You wi
 2. **Modes UI**: Three buttons (Review/Character/Plot), active highlight, **hide other modes until Reset**.
 3. **Chat Backend**: PHP REST endpoint calls the AI provider; strong error handling; prompt templates per mode.
 4. **Transcripts**: Implement **Export .txt** and **Save to Draft** with nonces and capability checks.
-5. **Admin Usage**: `/wp-admin/admin.php?page=author_write-usage` — show usage counts, optional CSV export.
+5. **Admin Usage**: `/wp-admin/admin.php?page=author_write_usage` - show usage counts, optional CSV export.
 6. **Polish & Docs**: Accessibility pass, CSS tidy-up, and a **README** (run, configure, package). Produce an installable `.zip`.
 
 ## Process Contract

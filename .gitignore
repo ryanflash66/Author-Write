@@ -1,0 +1,4 @@
+# Local development artifacts
+.wp-env/
+.wp-env.json.lock
+wp-env.override.json

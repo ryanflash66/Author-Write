@@ -1,0 +1,19 @@
+## Summary
+Explain the change and link the Issue.
+
+## Scope
+- [ ] Small, focused PR
+- [ ] No secrets in JS/HTML
+- [ ] Matches `rules.md` and `acceptance.md`
+
+## Manual Test Steps
+1. …
+2. …
+
+## Changelog
+- Proposed bump: patch | minor | major
+- Entry (Keep a Changelog style):
+  - Added: …
+  - Changed: …
+  - Fixed: …
+  - Removed: …
