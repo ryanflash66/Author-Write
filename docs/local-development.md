@@ -71,7 +71,7 @@ author_write/
 └── CHANGELOG.md              # Keep a Changelog compliant history
 ```
 
-Additional files (e.g., `README.md`, `composer.json`) will be introduced as capabilities expand.
+Additional files (e.g., `composer.json`) will be introduced as capabilities expand. See the main `README.md` for plugin overview and quick start instructions.
 
 ## Git Ignore
 

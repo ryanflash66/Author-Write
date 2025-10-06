@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Normalized plugin slug and text domain to `author_write`.
 - Clarified README setup steps and referenced local development docs.
 
+### Documentation
+
+- Added comprehensive `README.md` with project overview, prerequisites, local development setup, API key configuration, shortcode usage, manual verification steps, and troubleshooting guide for `wp-env` lifecycle.
+
 ## [0.1.0] - TBD
 
 ### Added
