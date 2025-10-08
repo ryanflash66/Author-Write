@@ -1,19 +1,23 @@
 # Author Write
 
-**AI-powered writing companion for WordPress with specialized creative modes.**
+**AI-powered writing companion for WordPress (currently in prototype mode).**
 
-Author Write is a WordPress plugin that embeds an AI chatbot to support creative writing workflows. Use the `[author_write]` shortcode to add focused writing assistance anywhere on your site with three specialized modes: Review, Character Development, and Plot Generation.
+Author Write is a WordPress plugin that will embed an AI chatbot to support creative writing workflows. In the current prototype, the `[author_write]` shortcode renders a placeholder interface that introduces the upcoming experience while the chat, export, and draft workflows are still in development.
 
-## Features
+## Current Functionality
 
-- **Three Specialized Modes:**
-  - **Review** — Constructive critique of prose (style, pacing, grammar, emotional impact)
-  - **Character Development** — Structured character profiles and arc development
-  - **Plot Generation** — Story outlines, conflicts, and scene structures
-- **Focused UI** — Selecting a mode hides the others until reset to maintain concentration
-- **Transcript Export** — Download conversation history as `.txt` files
-- **Save to Draft** — Store transcripts as WordPress draft posts
-- **Usage Tracking** — Admin dashboard for monitoring mode usage
+- **Mode Selector Preview** — Review, Character Development, and Plot Generation buttons display the creative modes planned for the full release.
+- **Reset Interaction** — The Reset button returns the interface to the initial placeholder state after a mode is selected.
+- **Placeholder Messaging** — The shortcode output clearly indicates that full chat features are forthcoming.
+
+## Roadmap Highlights
+
+The following capabilities are planned and tracked in the project roadmap but are **not yet implemented**:
+
+- AI-assisted chat experience with tailored prompts for each mode
+- Transcript export to `.txt`
+- "Save to Draft" to create WordPress drafts from transcripts
+- Usage tracking dashboard in WP Admin with per-mode metrics
 
 ## Prerequisites
 
@@ -64,20 +68,9 @@ For detailed environment configuration, see [`docs/local-development.md`](docs/l
 
 ## Configuration
 
-### API Key Setup (Server-Side Only)
+### API Key Setup (Planned)
 
-**Important:** API credentials must remain server-side and never be exposed to the browser.
-
-The plugin routes chat traffic through the WordPress REST endpoint `author_write/v1/chat`. Configure your AI provider credentials in PHP:
-
-1. Add your API key to `wp-config.php` or use WordPress constants:
-   ```php
-   define( 'AUTHOR_WRITE_API_KEY', 'your-api-key-here' );
-   ```
-
-2. Or use environment variables in your hosting setup (recommended for production)
-
-**Note:** Detailed AI provider configuration is planned for future releases.
+Server-side API credential management will be documented once chat functionality ships. The production implementation will route requests through a WordPress REST endpoint and keep credentials on the server. Until then, no API configuration is required.
 
 ## Usage
 
@@ -90,13 +83,11 @@ The plugin routes chat traffic through the WordPress REST endpoint `author_write
    ```
 3. **Publish or preview** the page to see the chat interface
 
-### Using the Chat Interface
+### Exploring the Prototype Interface
 
-1. **Select a mode** — Click Review, Character Development, or Plot Generation
-2. **Start chatting** — Type your message and press send
-3. **Export transcript** — Click the Export button to download a `.txt` file
-4. **Save to Draft** — Store the conversation as a WordPress draft post
-5. **Reset** — Return to mode selection to switch modes
+1. **Select a mode** — Click Review, Character Development, or Plot Generation to see the planned creative flows.
+2. **Read the placeholder copy** — The interface explains that full chat capabilities are in development.
+3. **Reset** — Use the Reset button to return to the mode selector.
 
 ## Manual Verification Steps
 
@@ -114,11 +105,11 @@ After setup, verify the plugin is working:
    - Add the `[author_write]` shortcode to the content
    - Click **Preview**
 
-4. **Test the interface:**
+4. **Review the interface:**
    - Verify the mode buttons appear
    - Click a mode and confirm others are hidden
    - Click Reset to restore all modes
-   - Test the chat input (requires API key configuration)
+   - Read the placeholder message that notes chat functionality is forthcoming
 
 5. **Run the test suite:**
    ```bash
@@ -160,9 +151,7 @@ After setup, verify the plugin is working:
 - View browser console for JavaScript errors
 
 **Chat not responding:**
-- Verify API key configuration
-- Check server error logs for REST endpoint issues
-- Ensure nonce generation is working (logged-in user required)
+- Full chat capabilities are not yet available. Track implementation progress in the project roadmap and future release notes.
 
 For detailed environment documentation, see [`docs/local-development.md`](docs/local-development.md).
 
